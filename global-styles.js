@@ -1,14 +1,11 @@
-import { css } from 'linaria';
-import staticVariables from './staticVariables';
+import { css } from '@linaria/core';
+import someStyles from './nestedStyles';
+import theme from './theme';
 
 export const globals = css`
   :global() {
-    html {
-      font-size: 20px;
-      color: ${staticVariables.redColor};
-      box-sizing: border-box;
-    }
-
+    ${someStyles}
+    font-size: ${theme.colors.UI.BLUE}
     *,
     *:before,
     *:after {

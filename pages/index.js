@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Layout from '../Layout';
-import { styled } from 'linaria/react'
-import { css } from 'linaria'
-import staticVariables from '../staticVariables';
+import { styled } from '@linaria/react'
+import { css } from '@linaria/core'
+import theme from '../theme';
 
 const Box = styled.div`
   margin-top: 40px;
@@ -24,7 +24,7 @@ const Box = styled.div`
 `
 
 const anotherClass = css`
-  color: ${staticVariables.redColor};
+  color: ${theme.colors.UI.BLUE};
 `
 
 export default function Home() {
