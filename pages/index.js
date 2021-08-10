@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../Layout';
+import Layout from '../components/Layout';
 import { styled } from '@linaria/react'
 import { css } from '@linaria/core'
 import theme from '../theme';
@@ -21,6 +21,10 @@ const Box = styled.div`
       transform: rotate(360deg);
     }
   }
+`;
+
+const RestyledLayout = styled(Layout)`
+  background: red;
 `
 
 const anotherClass = css`
@@ -36,6 +40,9 @@ export default function Home() {
       <Layout>
         <Box className={anotherClass}>Zero runtime CSS in JS</Box>
       </Layout>
+      <RestyledLayout>
+        <Box className={anotherClass}>Zero runtime CSS in JS (Restyled)</Box>
+      </RestyledLayout>
     </>
   )
 }
